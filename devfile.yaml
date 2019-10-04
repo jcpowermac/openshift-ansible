@@ -12,8 +12,18 @@ components:
   - mountSources: true
     memoryLimit: 512Mi
     type: dockerimage
+    alias: python
+    image: 'quay.io/eclipse/che-python-3.6:nightly'
+  - mountSources: true
+    memoryLimit: 512Mi
+    type: dockerimage
     alias: openshift-ansible
     image: 'quay.io/openshift/origin-ansible:v3.11'
+    command:
+      - tail
+    args:
+      - '-f'
+      - /dev/null
   - id: redhat/vscode-yaml/latest
     type: chePlugin
   - id: eclipse/che-theia/latest
