@@ -6,6 +6,10 @@ projects:
     source:
       location: 'https://github.com/openshift/openshift-ansible'
       type: git
+  - name: oa-testing
+    source:
+      location: 'https://github.com/mtnbikenc/oa-testing'
+      type: git
 attributes:
   persistVolumes: 'false'
 components:
