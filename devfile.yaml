@@ -1,0 +1,24 @@
+---
+metadata:
+  generateName: openshift-ansible-
+projects:
+  - name: openshift-ansible
+    source:
+      location: 'https://github.com/openshift/openshift-ansible'
+      type: git
+attributes:
+  persistVolumes: 'false'
+components:
+  - id: ms-python/python/latest
+    memoryLimit: 512Mi
+    type: chePlugin
+  - mountSources: true
+    memoryLimit: 512Mi
+    type: dockerimage
+    alias: python
+    image: 'quay.io/eclipse/che-python-3.6:nightly'
+  - id: redhat/vscode-yaml/latest
+    type: chePlugin
+  - id: eclipse/che-theia/latest
+    type: cheEditor
+apiVersion: 1.0.0
