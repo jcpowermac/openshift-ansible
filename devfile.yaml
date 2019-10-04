@@ -15,6 +15,11 @@ components:
   - mountSources: true
     memoryLimit: 512Mi
     type: dockerimage
+    alias: openshift-ansible
+    image: 'quay.io/openshift/origin-ansible:v3.11'
+  - mountSources: true
+    memoryLimit: 512Mi
+    type: dockerimage
     alias: python
     image: 'quay.io/eclipse/che-python-3.6:nightly'
   - id: redhat/vscode-yaml/latest
