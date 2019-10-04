@@ -9,9 +9,6 @@ projects:
 attributes:
   persistVolumes: 'false'
 components:
-  - id: ms-python/python/latest
-    memoryLimit: 512Mi
-    type: chePlugin
   - mountSources: true
     memoryLimit: 512Mi
     type: dockerimage
