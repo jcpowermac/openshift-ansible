@@ -19,9 +19,8 @@ components:
     type: dockerimage
     alias: openshift-ansible
     image: 'quay.io/openshift/origin-ansible:v3.11'
-    command:
-      - tail
     args:
+      - tail
       - '-f'
       - /dev/null
   - id: redhat/vscode-yaml/latest
